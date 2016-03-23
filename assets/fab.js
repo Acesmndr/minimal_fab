@@ -1,8 +1,15 @@
 // v1.1.0
 (function(){
   fabSetup = (buttons) => {
-    let _fabTimeout;
+    let _fabTimer;
+    let fabBg = document.createElement("div");
+    fabBg.className = "fab-bg";
+    fabBg.addEventListener("mouseout",(event) => {
+      event = event.toElement.classList;
+      (event.contains("fab-main")||event.contains("fab-child")||event.contains("fab-bg")||event.contains("fa"))?false:_closeFab();
+    });
     buttons.map((_btn)=>{
+      document.body.appendChild(fabBg);
       _btn.icon = _btn.icon || "info";
       _btn.help = _btn.help || "Instructions";
       _btn.callback = _btn.callback || function(){};
@@ -16,10 +23,13 @@
         _closeFab();
         _btn.callback();
       });
+      fabBtn.addEventListener("mouseover",function(){
+
+      });
       let fabIcon = document.createElement("i");
       fabIcon.className = "fa fa-fw fa-"+_btn.icon;
       fabBtn.appendChild( fabIcon );
-      document.body.appendChild( fabBtn );
+      fabBg.appendChild( fabBtn );
     });
     let mainBtn = document.createElement("a");
     mainBtn.className = "fab-main";
@@ -30,8 +40,8 @@
     let mainIcon = document.createElement("i");
     mainIcon.className = "fa fa-fw fa-question";
     mainBtn.appendChild( mainIcon );
-    mainBtn.addEventListener("click",() => {
-      (mainBtn.children[0].classList.contains("fa-question"))?_openFab():_closeFab();
+    mainBtn.addEventListener("mouseover",() => {
+      _openFab();
     });
     _openFab = () => {
       mainBtn.setAttribute("data-original-title","Close");
@@ -39,7 +49,7 @@
       for( let i=0;i < document.getElementsByClassName("fab-child").length; i++ ){
           document.getElementsByClassName("fab-child")[i].classList.add("fab-child-display");
       }
-      _fabTimeout = setTimeout(_closeFab,5000);
+      // _fabTimeout = setTimeout(_closeFab,5000);
     }
     _closeFab = () => {
       mainBtn.setAttribute("data-original-title","Help");
@@ -47,9 +57,9 @@
       for( let i=0;i < document.getElementsByClassName("fab-child").length; i++ ){
         document.getElementsByClassName("fab-child")[i].classList.remove("fab-child-display");
       }
-      clearTimeout(_fabTimeout);
+      // clearTimeout(_fabTimeout);
     };
-    document.body.appendChild( mainBtn );
+    fabBg.appendChild( mainBtn );
     $('[data-toggle="tooltip"]').tooltip();
   };
   fabSyntax = () => {
