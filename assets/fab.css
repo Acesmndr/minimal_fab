@@ -42,6 +42,20 @@
 .fab-main:hover,.fab-child:hover{
   color:white;
 }
+.fa-times{
+  animation: cross-spin 0.5s linear;
+}
+.fa-question{
+  animation: question-spin 0.5s linear;
+}
+@-webkit-keyframes cross-spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(90deg);}
+}
+@-webkit-keyframes question-spin {
+0% { transform: rotate(180deg); }
+100% { transform: rotate(0deg);}
+}
 
 .fab-child-display:nth-of-type(1) {transform: translateY(-55px);}
 .fab-child-display:nth-of-type(2) {transform: translateY(-105px);}
