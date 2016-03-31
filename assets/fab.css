@@ -6,12 +6,12 @@
   right: 5px;
 }
 .fab-main, .fab-child {
-  background-color: #357CA5;
+  background-color: #2B93EA;
   display: inline-block;
   position: absolute;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.32);
   cursor: pointer;
   outline: none;
   -webkit-user-drag: none;
@@ -20,7 +20,7 @@
 }
 .fab-main{
   z-index: 1000;
-  padding: 14px 11.16px;
+  padding: 12px 10px;
   font-size: 20px;
   right: 5px;
   bottom: 10px;
@@ -29,34 +29,51 @@
 .fab-child {
   text-align: center;
   z-index:999;
-  right: 9px;
-  padding: 12px 9.75px;
+  left: 8px;
+  padding: 12px 10px;
   font-size: 16px;
   bottom: 14px;
   transition:transform 0.5s ease-in;
 }
+.fab-main>.fa-question{
+  pointer-events: none;
+}
+.fab-child>.fa{
+  pointer-events: none;
+}
 .fab-child:hover,.fab-main:hover {
   margin-bottom: 1px;
-  background-color: #0088BB;
 }
 .fab-main:hover,.fab-child:hover{
   color:white;
 }
-.fab-main>.fa-times{
-  animation: cross-spin 0.5s linear;
+.forward-spin{
+  animation: forward-spin 0.6s linear;
 }
-.fab-main>.fa-question{
-  animation: question-spin 0.5s linear;
+.reverse-spin{
+  animation: reverse-spin 0.6s linear;
 }
-@-webkit-keyframes cross-spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(90deg);}
-}
-@-webkit-keyframes question-spin {
-0% { transform: rotate(180deg); }
+@-webkit-keyframes reverse-spin {
+0% { transform: rotate(360deg); }
 100% { transform: rotate(0deg);}
 }
+@-webkit-keyframes forward-spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg);}
+}
 .fab-child-display:nth-of-type(1) {transform: translateY(-55px);}
-.fab-child-display:nth-of-type(2) {transform: translateY(-105px);}
-.fab-child-display:nth-of-type(3) {transform: translateY(-155px);}
-.fab-child-display:nth-of-type(4) {transform: translateY(-205px);}
+.fab-child-display:nth-of-type(2) {transform: translateY(-108px);}
+.fab-child-display:nth-of-type(3) {transform: translateY(-158px);}
+.fab-child-display:nth-of-type(4) {transform: translateY(-208px);}
+
+.tooltipx{
+  background-color: #757575;
+  color: white;
+  position: fixed;
+  padding: 5px 10px;
+  right: 70px;
+  display: none;
+}
+.tooltipx-show{
+  display: block;
+}
