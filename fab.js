@@ -1,4 +1,6 @@
 const swal = require('sweetalert');
+require('./style/fab.css');
+
 module.exports = function(buttons){
   let fabBg = document.createElement('div');
   fabBg.className = 'fab-bg';
