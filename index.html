@@ -1,16 +1,13 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/fab.css"/>
 </head>
 <body>
-  <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
   <script src="assets/fab.js"></script>
   <script>
-    fabSetup({instruction:`This is a instruction`,video:"https://www.youtube.com/embed/EXeTwQWrcwY",shortcut:"Shortcut description"});
+    fabSetup([{type:"instruction", data:`This is an instruction`}]);
+    
+    // ,video:"https://www.youtube.com/embed/EXeTwQWrcwY",shortcut:"Shortcut description"});
   </script>
 </body>
 </html>
