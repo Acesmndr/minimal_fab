@@ -19,7 +19,7 @@ npm i minimal_fab
 ## Usage
 ```js
 let fab = require('minimal_fab');
-fabSetup([
+fab([
     { type: 'text', text: `Here is some text that I'd like to see in a modal dialog` },
     { type: 'video', link: 'https://www.youtube.com/embed/EfvsNZIW970' },
     { type: 'link', link: 'http://youtube.com', title: 'Go to Youtube' },
