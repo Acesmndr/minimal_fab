@@ -1,5 +1,5 @@
 # minimal_fab
-[![npm](https://img.shields.io/badge/npm-v1.2.0-green.svg)]()
+[![npm](https://img.shields.io/badge/npm-v1.2.2-green.svg)]()
 [![license](https://img.shields.io/npm/l/express.svg)]()
 
 An implementation of Floating Action Button by Google in plain css and javascript.
@@ -26,7 +26,7 @@ fabSetup([
     { type: 'custom', callback: () => { console.log('I can do almost anything')} },
 ]);
 ```
-You can view the demo at [acesmndr.github.io/minimal_fab](acesmndr.github.io/minimal_fab)
+You can view the demo at [acesmndr.github.io/minimal_fab](https://acesmndr.github.io/minimal_fab)
 or dig into the demo source code at [Demo Sourcecode](https://github.com/Acesmndr/minimal_fab/tree/gh-pages)
 
 ## Webpack configuration
