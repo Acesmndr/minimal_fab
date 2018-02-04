@@ -1,0 +1,30 @@
+{
+  "name": "minimal_fab",
+  "version": "1.2.2",
+  "description": "Minimal floating action button with css and javascript",
+  "main": "fab.js",
+  "style": "style/fab.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "style",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acesmndr/minimal_fab.git"
+  },
+  "keywords": [
+    "fab"
+  ],
+  "author": "acesmndr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Acesmndr/minimal_fab/issues"
+  },
+  "homepage": "https://github.com/Acesmndr/minimal_fab#readme",
+  "dependencies": {
+    "sweetalert": "^2.0.8"
+  }
+}
